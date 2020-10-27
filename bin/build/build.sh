@@ -46,8 +46,11 @@ echo "\t\tcopy fresh ${RKISP1_EXTRA}"
 cp -r ../3rd/${RKISP1_EXTRA} ./ 
 
 cd ${RKISP1}
+pwd
 make
 
-cd ../${RKISP1_extra}
+pwd
+cd ../${RKISP1_EXTRA}
+pwd
 ./autogen.sh
 make
