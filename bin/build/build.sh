@@ -48,3 +48,6 @@ cp -r ../3rd/${RKISP1_EXTRA} ./
 cd ${RKISP1}
 make
 
+cd ../${RKISP1_extra}
+./autogen.sh
+make
