@@ -2,6 +2,7 @@
 RKISP1=camera_engine_rkisp
 RKISP1_EXTRA=gstreamer-rockchip-extra
 
+mkdir ../../3rd -p
 cd ../../3rd
 echo "\tcurrent dir is: `pwd`"
 if test -d  "${RKISP1}"; then
