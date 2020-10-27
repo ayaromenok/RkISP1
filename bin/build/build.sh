@@ -1,4 +1,6 @@
 #!/bin/sh
+./update_system.sh
+
 RKISP1=camera_engine_rkisp
 RKISP1_EXTRA=gstreamer-rockchip-extra
 
@@ -42,3 +44,7 @@ if test -d  "${RKISP1_EXTRA}"; then
 fi
 echo "\t\tcopy fresh ${RKISP1_EXTRA}"
 cp -r ../3rd/${RKISP1_EXTRA} ./ 
+
+cd ${RKISP1}
+make
+

@@ -1,6 +1,6 @@
 #!/bin/sh
-#sudo apt update
-#sudo apt upgrade
+sudo apt update
+sudo apt upgrade
 #libgstreamer-dev also include libglib2.0-dev
 sudo apt install v4l-utils libncurses-dev libgstreamer1.0-dev libdrm-dev libgstreamer-plugins-base1.0-dev libgstreamer-plugins-good1.0-dev -y
 
