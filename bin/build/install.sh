@@ -20,6 +20,30 @@ else
 	echo "RkISP1 API lib is:\t\t NoK"
 fi
 
+sudo mkdir /usr/lib/rkisp/aec -p
+sudo cp -f "${RKISP1}/plugins/3a/rkiq/aec/lib64/librkisp_aec.so" /usr/lib/rkisp/aec/
+if test -f  "/usr/lib/rkisp/aec/librkisp_aec.so"; then
+	echo "RkISP1 AEC lib is:\t\t OK"
+else
+	echo "RkISP1 AEC lib is:\t\t NoK"
+fi
+
+sudo mkdir /usr/lib/rkisp/af -p
+sudo cp -f "${RKISP1}/plugins/3a/rkiq/af/lib64/librkisp_af.so" /usr/lib/rkisp/af/
+if test -f  "/usr/lib/rkisp/af/librkisp_af.so"; then
+	echo "RkISP1 AF lib is:\t\t OK"
+else
+	echo "RkISP1 AF lib is:\t\t NoK"
+fi
+
+sudo mkdir /usr/lib/rkisp/awb -p
+sudo cp -f "${RKISP1}/plugins/3a/rkiq/awb/lib64/librkisp_awb.so" /usr/lib/rkisp/awb/
+if test -f  "/usr/lib/rkisp/awb/librkisp_awb.so"; then
+	echo "RkISP1 AWB lib is:\t\t OK"
+else
+	echo "RkISP1 AWB lib is:\t\t NoK"
+fi
+
 sudo cp -f "${RKISP1}/build/lib/libgstrkisp.so" /usr/lib/aarch64-linux-gnu/gstreamer-1.0/
 if test -f  "/usr/lib/aarch64-linux-gnu/gstreamer-1.0/libgstrkisp.so"; then
 	echo "GStreamer rkisp plugin is:\t OK"
@@ -55,6 +79,7 @@ else
 	echo "GStreamer/Rk X Image sink is:\t NoK"
 fi
 
+
 sudo ldconfig
 
 #test result
@@ -68,4 +93,4 @@ gst-inspect-1.0 -b | grep kms
 echo "\tcheck GStreamer pipeline"
 gst-launch-1.0 rkisp device=/dev/video0 num-buffers=1 ! video/x-raw,format=NV12,width=2688,height=1520 ! videoconvert ! jpegenc ! multifilesink location=img0.jpg
 
-
+echo "\n\t\tToDo: install header files too"
