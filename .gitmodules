@@ -1,6 +1,6 @@
 [submodule "3rd/camera_engine_rkisp"]
 	path = 3rd/camera_engine_rkisp
-	url = https://github.com:ayaromenok/camera_engine_rkisp.git
+	url = https://github.com/ayaromenok/camera_engine_rkisp.git
 [submodule "3rd/gstreamer-rockchip-extra"]
 	path = 3rd/camera_engine_rkisp
-	url = https://github.com:ayaromenok/gstreamer-rockchip-extra.git
+	url = https://github.com/ayaromenok/gstreamer-rockchip-extra.git
