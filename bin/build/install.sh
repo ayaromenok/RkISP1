@@ -4,6 +4,7 @@ RKISP1=camera_engine_rkisp
 RKISP1_EXTRA=gstreamer-rockchip-extra
 
 #check install results
+cp -f rkisp1.conf /etc/ld.so.conf.d/
 
 cd ../../build
 sudo cp "${RKISP1}/build/lib/librkisp.so" /usr/lib/
@@ -79,7 +80,7 @@ else
 	echo "GStreamer/Rk X Image sink is:\t NoK"
 fi
 
-
+echo "ldconfig"
 sudo ldconfig
 
 #test result
