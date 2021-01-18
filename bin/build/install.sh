@@ -4,9 +4,14 @@ RKISP1=camera_engine_rkisp
 RKISP1_EXTRA=gstreamer-rockchip-extra
 
 #check install results
-cp -f rkisp1.conf /etc/ld.so.conf.d/
+sudo cp -f rkisp1.conf /etc/ld.so.conf.d/
 
 cd ../../build
+#buils ISP
+cd "${RKISP1}"
+make
+cd ..
+
 sudo cp "${RKISP1}/build/lib/librkisp.so" /usr/lib/
 if test -f  "/usr/lib/librkisp.so"; then
 	echo "RkISP1 driver is:\t\t OK"
@@ -87,11 +92,11 @@ sudo ldconfig
 echo "\n\n"
 echo "\tcheck RkISP1 driver/demo:"
 sudo /usr/local/bin/rkisp_demo --device=/dev/video0  --count=5 --output=_out.yuv
-echo "\tcheck GStreamer plugins"
-gst-inspect-1.0 | grep rkisp
-gst-inspect-1.0 | grep rkximage
-gst-inspect-1.0 -b | grep kms
-echo "\tcheck GStreamer pipeline"
-gst-launch-1.0 rkisp device=/dev/video0 num-buffers=1 ! video/x-raw,format=NV12,width=2688,height=1520 ! videoconvert ! jpegenc ! multifilesink location=img0.jpg
+#echo "\tcheck GStreamer plugins"
+#gst-inspect-1.0 | grep rkisp
+#gst-inspect-1.0 | grep rkximage
+#gst-inspect-1.0 -b | grep kms
+#echo "\tcheck GStreamer pipeline"
+#gst-launch-1.0 rkisp device=/dev/video0 num-buffers=1 ! video/x-raw,format=NV12,width=2688,height=1520 ! videoconvert ! jpegenc ! multifilesink location=img0.jpg
 
-echo "\n\t\tToDo: install header files too"
+#echo "\n\t\tToDo: install header files too"
