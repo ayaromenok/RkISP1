@@ -3,18 +3,26 @@
 RKISP1=camera_engine_rkisp
 RKISP1_EXTRA=gstreamer-rockchip-extra
 
+#clear current install
+sudo rm /usr/local/bin/rkisp*
+sudo rm /usr/lib/librkisp.so
+
 #check install results
 sudo cp -f rkisp1.conf /etc/ld.so.conf.d/
 
 cd ../../build
 #buils ISP
 cd "${RKISP1}"
-git stash
-git checkout $1
-sed 's/^CROSS_COMPILE/#&/' productConfigs.mk > out.txt
-rm productConfigs.mk
-cp out.txt productConfigs.mk
-make
+#make clean
+#git stash
+#git checkout $1
+#sed 's/^CROSS_COMPILE/#&/' productConfigs.mk > out.txt
+#rm productConfigs.mk
+#cp out.txt productConfigs.mk
+
+#echo "temporary - from 20190107-516dfdf to 20190404-10bce5c"
+#cp -r -f ../3a_bin/* ./
+make -j 2
 cd ..
 
 sudo cp "${RKISP1}/build/lib/librkisp.so" /usr/lib/

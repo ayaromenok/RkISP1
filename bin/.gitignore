@@ -1,2 +1,4 @@
 .config
 _*.jpg
+_*.png
+*.yuv
