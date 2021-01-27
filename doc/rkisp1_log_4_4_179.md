@@ -1,3 +1,6 @@
+last working version - 399eb25 | 2019-01-03 | parms and stats video nodes use 4 buffers |
+SegFault - 90b01ab | 2019-01-29 | X3aAnalyzer will init/deinit when cl stat/stop, fix it |
+
 |Status | Hash | Date | Original message |
 |---|---|---|---|
 |  | ab9fe74 | 2020-10-06 | removed cross-compilation fixed prefix |
@@ -54,7 +57,7 @@
 |  | c12554f | 2019-09-11 | rkisp_3A_server: flush stdout |
 |  | 6298100 | 2019-09-04 | rkisp_3A_server: Simplfy include files |
 |  | fd10af7 | 2019-08-29 | rkisp_3A_server: cleanup TODO about POLLERR. |
-|  | e456a50 | 2019-07-01 | librkisp: v2.2.0 |
+| **NoK** SegFault | e456a50 | 2019-07-01 | librkisp: v2.2.0 |
 |  | dd6ad01 | 2019-07-31 | calibdb: v1.5.0 |
 |  | 3fee8b5 | 2019-08-12 | fix goc stats error of hdr ae |
 |  | 9611f48 | 2019-07-30 | add HdrAeSwitch in TimeDot setting |
@@ -70,7 +73,7 @@
 |  | 888093f | 2019-07-30 | tests: workaround the rkisp_demo build failed |
 |  | df38758 | 2019-07-10 | tests: run engine in standalone process |
 |  | 9d228d9 | 2019-07-24 | rkiq: sync with v2.2.0 iqfiles |
-|  | bf5d158 | 2019-07-01 | librkisp: v2.2.0 |
+| **NoK** compile error | bf5d158 | 2019-07-01 | librkisp: v2.2.0 |
 |  | 5036731 | 2019-07-10 | unsubscribe event when engine pause |
 |  | beb684b | 2019-04-29 | add HdrAE acceleration & smooth strategy |
 |  | 4139058 | 2019-04-29 | Calibdb: v1.4.0 magic version:704841 |
@@ -136,11 +139,11 @@
 |  | d8d1f54 | 2019-04-01 | rkisp_demo: add silent option and stream to stdout |
 |  | cdc32da | 2019-03-11 | tests: rkisp_demo add gain/expo options |
 |  | c11c89e | 2019-04-16 | rkisp_demo: use subdev type to determine the sensor entity |
-|**NoK** SegFault | 033f414 | 2019-04-10 | fix aec meas window check error |
+| **NoK** SegFault | 033f414 | 2019-04-10 | fix aec meas window check error |
 |  | 1b6d785 | 2019-04-10 | set init focus position  before sensor streaming |
-|  | 1e62ba4 | 2019-04-09 | fix bug: map hist weights error from 9x9 to 5x5 |
-|  | 10bce5c | 2019-04-04 | rkiq: sync with develop branch |
-| **NoK** compile error | d14c296 | 2019-03-14 | librkisp: v1.9.0 |
+| **NoK** SegFault | 1e62ba4 | 2019-04-09 | fix bug: map hist weights error from 9x9 to 5x5 |
+| **NoK** fixed compile error | 10bce5c | 2019-04-04 | rkiq: sync with develop branch |
+| **NoK** compile error/SegFault| d14c296 | 2019-03-14 | librkisp: v1.9.0 |
 |  | 176b51f | 2019-03-18 | add ov8858 iq xml |
 |  | 4690b8e | 2019-03-28 | use preisp HDR aec mode only when HdrCtrl is enabled in iq file |
 |  | 9e8f7ff | 2019-03-28 | add imx317 preisp iq xml |
@@ -162,23 +165,23 @@
 |  | 8fe9581 | 2019-02-25 | fix rkisp_cl_stop crash sometimes |
 |  | 835c188 | 2019-02-19 | calibdb: v0.2.4 |
 |  | 998d969 | 2019-02-21 | force to use auto selected iq xml file |
-|  | 1424a20 | 2019-02-19 | add frame sof timestamp to vendor tags |
+| **NoK** compile error/SegFault | 1424a20 | 2019-02-19 | add frame sof timestamp to vendor tags |
 |  | 0b11840 | 2019-02-19 | report exposure/gain in result metadata correctly |
 |  | 5de6eeb | 2019-02-18 | support vendor metadata tags |
 |  | 4129641 | 2019-02-01 | calibdb:v0.2.2 : add & update IQ xml files |
 |  | b227266 | 2019-02-15 | apply OTP config to driver |
 |  | 05586c2 | 2019-02-14 | calibdb: v0.2.3   add otp info in IQ xml |
 |  | 5aac5b8 | 2019-01-18 | add rk IeSharp, demosaicLp, 3dnr, new 3dnr, wdr functions in hal calibdb: change rkIEsharp parameters type |
-|  | f421159 | 2019-01-29 | fix the memory leak problem |
+| **NoK** compile error/SegFault | f421159 | 2019-01-29 | fix the memory leak problem |
 |  | e3738da | 2019-01-18 | add rk IeSharp, demosaicLp, 3dnr, new 3dnr, wdr functions in hal |
-|  | 90b01ab | 2019-01-29 | X3aAnalyzer will init/deinit when cl stat/stop, fix it |
-|  | 6219c34 | 2019-01-22 | support using preisp goc params |
+| **NoK** compile error/SegFault fisrt time | 90b01ab | 2019-01-29 | X3aAnalyzer will init/deinit when cl stat/stop, fix it |
+| **NoK** compile error/Err in image | 6219c34 | 2019-01-22 | support using preisp goc params |
 |  | 6ecb81b | 2019-01-25 | apply first params before streaming |
 |  | b8e18e4 | 2019-01-23 | fix HdrCtrl error for Calibdb v0.2.2 |
 |  | 423d204 | 2019-01-16 | iq file: check gain range & gain dot |
 |  | a666cf2 | 2019-01-16 | transfer effecting hardware awb params with stats to algo |
 |  | 224b1fc | 2019-01-15 | isp_controller: set isp params in SOF handler |
-| **NoK** compile error | 516dfdf | 2019-01-07 | run ae every frame, make ae converge much more smooth |
+| **NoK** compile error - fixed in 20190404-10bce5c | 516dfdf | 2019-01-07 | run ae every frame, make ae converge much more smooth |
 | **OK** | 399eb25 | 2019-01-03 | parms and stats video nodes use 4 buffers |
 | **OK** | 13fe6f2 | 2019-01-15 | isp_image_processor: fix one isp result will be applied several times |
 | **OK** | a4b33ea | 2019-01-14 | cam_ia10: no longer need monitor the change of sensor mode |
