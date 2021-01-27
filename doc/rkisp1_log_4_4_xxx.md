@@ -136,11 +136,11 @@
 |  | d8d1f54 | 2019-04-01 | rkisp_demo: add silent option and stream to stdout |
 |  | cdc32da | 2019-03-11 | tests: rkisp_demo add gain/expo options |
 |  | c11c89e | 2019-04-16 | rkisp_demo: use subdev type to determine the sensor entity |
-|  | 033f414 | 2019-04-10 | fix aec meas window check error |
+| NoK - SegFault | 033f414 | 2019-04-10 | fix aec meas window check error |
 |  | 1b6d785 | 2019-04-10 | set init focus position  before sensor streaming |
 |  | 1e62ba4 | 2019-04-09 | fix bug: map hist weights error from 9x9 to 5x5 |
 |  | 10bce5c | 2019-04-04 | rkiq: sync with develop branch |
-|  | d14c296 | 2019-03-14 | librkisp: v1.9.0 |
+| NoK - compile error | d14c296 | 2019-03-14 | librkisp: v1.9.0 |
 |  | 176b51f | 2019-03-18 | add ov8858 iq xml |
 |  | 4690b8e | 2019-03-28 | use preisp HDR aec mode only when HdrCtrl is enabled in iq file |
 |  | 9e8f7ff | 2019-03-28 | add imx317 preisp iq xml |
@@ -185,7 +185,7 @@
 |  | 041edb5 | 2019-03-21 | Makefile.rules: Add () to BUILD_DIR |
 |  | e9e1997 | 2019-03-21 | make: Add output directory options |
 |  | cfe846d | 2019-03-01 | interface: rkisp_control_loop: Remove CameraMetadata.h for linux |
-|  | a9cb2ce | 2019-01-10 | librkisp version: v1.6.0 |
+| OK | a9cb2ce | 2019-01-10 | librkisp version: v1.6.0 |
 |  | 0ed5320 | 2019-01-11 | use ISO100 unit for sensitivity gain |
 |  | 3ebd8d3 | 2019-01-11 | fix exposure settings error |
 |  | 1cc7e29 | 2019-01-15 | update AWE&AEC libs and header |
@@ -202,7 +202,7 @@
 |  | 59723b0 | 2018-12-29 | fix typo erro MEDIA_BUS_FMT_Y8_1X8 in commit fa4e62 |
 |  | 05f2bab | 2018-12-28 | Merge "support BW sensor for Y8/Y10/Y12" |
 |  | e8a03ea | 2018-12-27 | fix BDM not bypassed for BW sensor |
-|  | 9122b69 | 2018-12-25 | librkisp version: v1.5.0 |
+| OK | 9122b69 | 2018-12-25 | librkisp version: v1.5.0 |
 |  | a83b3e1 | 2018-12-25 | update header for the rkiq |
 |  | 9f00ddb | 2018-12-25 | fix dpcc check error again |
 |  | 37789d0 | 2018-12-24 | Merge "IQ files: change dpcc para for old dpcc mode" into master |
@@ -224,7 +224,7 @@
 |  | cfed5e5 | 2018-11-27 | delete unused ext/rkisp/lib/librkisp.so |
 |  | 15b4762 | 2018-11-26 | add update_header_android |
 |  | fa4e629 | 2018-12-20 | support BW sensor for Y8/Y10/Y12 |
-|  | 9943718 | 2018-11-21 | version v1.3.0 |
+| OK | 9943718 | 2018-11-21 | version v1.3.0 |
 |  | 23dff1b | 2018-11-22 | rkisp_demo: fix get null media device in last commit |
 |  | 3f3e12b | 2018-11-21 | avoid using function like gstxxx in rkisp_demo |
 |  | e047cc9 | 2018-11-21 | camera engine needn't include awbConvert.h |
@@ -258,7 +258,7 @@
 |  | d63537c | 2018-09-30 | iqfiles: Rename all iq file names |
 |  | 81053c3 | 2018-09-27 | fix default aec/af measure window |
 |  | b368308 | 2018-09-27 | iqfiles: Add ov13850.xml and ov5695.xml to iqfiles |
-|  | 96bf0f2 | 2018-09-26 | fix compile error for v1.1.0 |
+| OK, all image green | 96bf0f2 | 2018-09-26 | fix compile error for v1.1.0 |
 |  | eb1b425 | 2018-09-26 | v1.1.0 |
 |  | 59b256b | 2018-09-19 | match with the new rkisp1 v12 dirver structures |
 |  | b5eb825 | 2018-09-18 | enable 3a control loop for Android platform |
@@ -277,7 +277,7 @@
 |  | 402c9af | 2018-08-21 | You can choose to compile libs base on platform. |
 |  | 9373f45 | 2018-08-21 | update awb 32-lib corresponded to cam engine v1.0.3 |
 |  | a3ab851 | 2018-08-10 | update 3A libs corresponded to cam engine v1.0.3 |
-|  | d1bc9ee | 2018-08-10 | v1.0.3 |
+| OK, all image green | d1bc9ee | 2018-08-10 | v1.0.3 |
 |  | 220d32f | 2018-08-10 | fix compile error |
 |  | 012e4c7 | 2018-08-08 | Add TAF support |
 |  | edec633 | 2018-08-03 | add TAE support |
@@ -293,7 +293,7 @@
 |  | 8a3d546 | 2018-08-06 | remove the trailing space for IS_RKISP_v12 |
 |  | 583cfe3 | 2018-08-03 | set new vts before exposure time |
 |  | 3c69361 | 2018-08-01 | fix some rkisp1 & rkisp12 bugs |
-|  | 8c780bc | 2018-07-27 | v1.0.1 |
+| OK, all image green  | 8c780bc | 2018-07-27 | v1.0.1 |
 |  | 073b857 | 2018-07-27 | fix memory leak issue |
 |  | e5edaef | 2018-07-27 | fix the inital ISP params bug |
 |  | 1249f18 | 2018-07-26 | set enable_y_max_cmp as true, enable CTK,CPROC,IE modules |
