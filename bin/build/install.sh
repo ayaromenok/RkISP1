@@ -13,16 +13,16 @@ sudo cp -f rkisp1.conf /etc/ld.so.conf.d/
 cd ../../build
 #buils ISP
 cd "${RKISP1}"
-make clean
-git stash
-git checkout $1
-sed 's/^CROSS_COMPILE/#&/' productConfigs.mk > out.txt
-rm productConfigs.mk
-cp out.txt productConfigs.mk
+#make clean
+#git stash
+#git checkout $1
+#sed 's/^CROSS_COMPILE/#&/' productConfigs.mk > out.txt
+#rm productConfigs.mk
+#cp out.txt productConfigs.mk
 
 #echo "temporary - from 20190107-516dfdf to 20190404-10bce5c"
 #cp -r -f ../3a_bin/* ./
-make -j 2
+#make -j 2
 cd ..
 
 sudo cp "${RKISP1}/build/lib/librkisp.so" /usr/lib/

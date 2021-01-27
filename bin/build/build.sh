@@ -1,5 +1,6 @@
 #!/bin/sh
 ./update_system.sh
+../getGStreamer.sh
 
 RKISP1=camera_engine_rkisp
 RKISP1_EXTRA=gstreamer-rockchip-extra
