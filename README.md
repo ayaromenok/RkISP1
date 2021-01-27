@@ -1,11 +1,17 @@
 # RkISP1
 RockChip ISP1 based (RK3399,RK3288) boards and camera status
 
-## Clone
+## Clone & make it work
 Sub-modules removed, so
 - `git clone git@github.com:ayaromenok/RkISP1.git`
-- `cd RkISP/bin/build`
+- `cd RkISP1/bin/build`
 - `sh ./build.sh`
+- `sh ./install.sh`
+
+## Test results
+
+Go to `cd RkISP1/bin/`Run `sh ./testRkISP1_demo_local.sh` - in `out` directory will be a number of PNG images with different `gain` and `exposure` - which was impossible in kernel 4.4.x due to bugs. By default it use Cam13 MPix, to use it with Cm4 MPix plz update
+
 
 
 ## FriendlyElec
