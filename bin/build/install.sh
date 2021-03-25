@@ -3,6 +3,8 @@
 RKISP1=camera_engine_rkisp
 RKISP1_EXTRA=gstreamer-rockchip-extra
 
+./backup.sh
+
 #clear current install
 sudo rm /usr/local/bin/rkisp*
 sudo rm /usr/lib/librkisp.so

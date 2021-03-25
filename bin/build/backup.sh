@@ -1,35 +1,42 @@
 #!/bin/sh
 
-mkdir backup
+if test -d "./backup"; then
+    echo "backup already present"
+else
+    echo "no backup yet"
 
-cp "/usr/lib/librkisp.so" ./backup
-if test -f  "./backup/librkisp.so"; then
+    mkdir backup
+
+    cp "/usr/lib/librkisp.so" ./backup
+    if test -f  "./backup/librkisp.so"; then
 	echo "RkISP1 driver backup is:\t\t OK"
-else
-	echo "RkISP1 driver backup is:\t\t NoK"
-fi
+    else
+    	echo "RkISP1 driver backup is:\t\t NoK"
+    fi
 
-
-mkdir ./backup/rkisp/ae -p
-cp -f "/usr/lib/rkisp/ae/librkisp_aec.so" ./backup/rkisp/ae/
-if test -f  "./backup/rkisp/ae/librkisp_aec.so"; then
+    mkdir ./backup/rkisp/ae -p
+    cp -f "/usr/lib/rkisp/ae/librkisp_aec.so" ./backup/rkisp/ae/
+    if test -f  "./backup/rkisp/ae/librkisp_aec.so"; then
 	echo "RkISP1 AEC lib backup is:\t\t OK"
-else
+    else
 	echo "RkISP1 AEC lib backup is:\t\t NoK"
-fi
+    fi
 
-mkdir ./backup/rkisp/af -p
-cp -f "/usr/lib/rkisp/af/librkisp_af.so" ./backup/rkisp/af/
-if test -f  "./backup/rkisp/af/librkisp_af.so"; then
+    mkdir ./backup/rkisp/af -p
+    cp -f "/usr/lib/rkisp/af/librkisp_af.so" ./backup/rkisp/af/
+    if test -f  "./backup/rkisp/af/librkisp_af.so"; then
 	echo "RkISP1 AF lib backup is:\t\t OK"
-else
+    else
 	echo "RkISP1 AF lib backup is:\t\t NoK"
+    fi
+
+    mkdir ./backup/rkisp/awb -p
+    cp -f "/usr/lib/rkisp/awb/librkisp_awb.so" ./backup/rkisp/awb/
+    if test -f  "./backup/rkisp/awb/librkisp_awb.so"; then
+	echo "RkISP1 AWB lib backup is:\t\t OK"
+    else
+	echo "RkISP1 AWB lib backup is:\t\t NoK"
+    fi
+    echo "backup done"
 fi
 
-mkdir ./backup/rkisp/awb -p
-cp -f "/usr/lib/rkisp/awb/librkisp_awb.so" ./backup/rkisp/awb/
-if test -f  "./backup/rkisp/awb/librkisp_awb.so"; then
-	echo "RkISP1 AWB lib backup is:\t\t OK"
-else
-	echo "RkISP1 AWB lib backup is:\t\t NoK"
-fi
